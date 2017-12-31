@@ -16,3 +16,23 @@
 | USB 3.3/5v FTDI           | http://amzn.to/2CkjBpZ |
 
 ![](prototype.jpg)
+
+
+# Enclosure Notes
+
+Ublox Antenna 25 x 25mm with 3mm fillet
+
+Screen 27 x 15mm
+
+Mounts
+
+      O------- 20mm -------O
+      |  2mm               |
+      |---- Screen Top ----|
+      |                    |
+    22mm                   |
+      |                    |
+      |---- Screen Bot ----|
+      |  6mm               |
+      |                    |
+      O ------- 20mm ------O

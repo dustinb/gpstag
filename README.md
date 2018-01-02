@@ -55,7 +55,7 @@ One listed has 3.3v regulator
 
 <img src="protovoltage.jpg" width="600" />
 
-<img src="gpstag_bb.jpg" width="600" />
+<img src="gpstag_bb.png" width="600" />
 
 # Enclosure Notes
 

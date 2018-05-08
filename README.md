@@ -1,3 +1,9 @@
+Small device for logging GPS, speed, altitude, and gyro data.  Leaked photos
+
+<img src="proto1.jpg" width="600" />
+
+<img src="proto2.jpg" width="600" />
+
 # Dependencies
 
 1. TinyGPS

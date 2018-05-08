@@ -1,6 +1,10 @@
+#include <MPU6050_tockn.h>
+#include <Wire.h>
+
+MPU6050 mpu6050(Wire);
 
 #define OLED
-#define BMP180
+//#define BMP180
 #define HWSERIAL
 
 // Using SPI bus for multiple devices
@@ -92,6 +96,10 @@ void setup() {
     ss.begin(GPSBaud);
     Serial.print("Setup");
   #endif  
+
+  Wire.begin();
+  mpu6050.begin();
+  mpu6050.calcGyroOffsets(false);
 }
 
 void loop() {
@@ -111,6 +119,8 @@ void loop() {
   // TODO: Log GPS lat/long elevation timestamp to sdcard
   // Review GPS standards for logging https://en.wikipedia.org/wiki/GPS_Exchange_Format
 
+   mpu6050.update();
+   
   #ifdef OLED
     u8g.firstPage();
     do {
@@ -132,6 +142,10 @@ void loop() {
       u8g.print(gps.location.lng(), 6);
       
       u8g.setPrintPos(0, 55);
+
+      u8g.print("gyro:");
+      u8g.print((int) mpu6050.getGyroX());
+      
       
       #ifdef BMP180
         u8g.print("bmp:");
